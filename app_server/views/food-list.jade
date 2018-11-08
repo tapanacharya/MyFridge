@@ -1,0 +1,29 @@
+extends layout
+
+include _includes/sharedHTMLfunctions
+
+block content
+  #banner.page-header
+    .row
+      .col-lg-6
+        h1= pageHeader.title      
+  .row
+    .col-xs-12.col-sm-8
+      h4.error= message
+      .row.food-item
+        each food in foods
+          .col-xs-12.food-list
+            h4 Food item: #{food.name}
+            p Purchased Date: 
+             +formatDate(food.date)
+            if food.expiry
+             p Expiry On: 
+              +formatDate(food.expiry)
+            else
+             p
+            if food.left_overs
+             p Left over: Yes
+            else
+             p
+            p Quantity: #{food.quantity}
+   

@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  .row.page-header
+    .col-lg-12
+      h2= pageHeader.title
+  .row
+    .col-xs-12.col-md-6
+      form.form-horizontal(action="", method="post", role="form")
+        - if (error == "val")
+          .alert.alert-danger(role="alert") All fields required, please try again
+        .form-group
+          label.col-xs-10.col-md-2.control-label(for="name") Name
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="name")
+        .form-group
+          label.col-md-2.control-label(for="date") Purchase Date:
+          .col-sm-10
+            input#date.form-control(type="date", name="date")
+        .form-group
+          label.col-md-2.control-label(for="expirydate") Expiry Date:
+          .col-sm-10
+            input#date.form-control(type="date", name="expirydate")
+        .form-group
+          label.col-xs-10.col-md-2.control-label(for="left_overs") Is left over?
+          .col-xs-12.col-md-2
+            select#rating.form-control.input-sm(name="left_overs")
+              option(value='1') True
+              option(value='0') False
+        .form-group
+          label.col-sm-2.control-label(for="quantity") Quantity:
+          .col-sm-10
+            input#quantity.form-control(name="quantity")
+        button.btn.btn-default.pull-right Add Food Item
+    .col-xs-12.col-md-4

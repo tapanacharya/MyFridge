@@ -1,8 +1,40 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
 }
 
 a {
   color: #00B7FF;
 }
+
+.page-header {
+    padding-top: 0px;
+    border-bottom: 1px #ffffff;
+    border-bottom-style: ridge;
+}
+
+.food-list {
+  background-color: #7e0917;
+  border-color: #111467;
+  border-radius: 5px;
+  padding-top: 2px;
+  width: 600px;
+}
+
+.btn {
+    background-color: #7e0917;
+    color: #fff;
+    border-color: #7e0917;
+}
+
+footer {
+    border-top: 2px #fff;
+    margin-top: 50px;
+    background-color: #7e0917;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
